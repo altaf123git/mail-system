@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block body %}
+
+<h1 class='center'>Add New Vendor Detail's</h1>
+
+<form method='post' action='add'>
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="enter a name">
+      </div>
+
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="text" class="form-control" name="email" id="email" placeholder="enter a email">
+    </div>
+
+    <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter a mobile number">
+      </div>
+
+      <div class="form-group">
+        <label for="pan">Upload Pan</label>
+        <input type="file" class="form-control" name="pan" id="pan" placeholder="enter a email">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% endblock body %}

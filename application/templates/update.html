@@ -1,0 +1,11 @@
+<h1> Update Form</h1>
+<form action="/update/{{record.id}}" method="post">
+    {% csrf_token %}
+    <input type="text" id='name' name='name' value={{record.name}}>
+    <input type="text" id='email' name='email' value={{record.email}}>
+    <input type="text" id='mobile' name='mobile' value={{record.mobile}}>
+    <input type="file" id='pan' name='pan' value={{record.pan}}>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

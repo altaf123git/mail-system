@@ -1,0 +1,36 @@
+<a href="/add">New Record</a>
+<h1 class="text-center"> Register User's </h1>
+<br>
+<div class="container">
+    <!-- We will display our data in a normal HTML table using Django's
+    template for-loop to generate our table rows for us-->
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            {%for item in record%}
+            
+            <tr>
+              <td>{{item.id}}</td>
+              <td>{{item.name }}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.mobile}}</td>
+              <td>{{item.city}}</td>
+              <td><div class="d.inline"><a href="update/{{item.id}}" type="button" class="btn btn-primary">Update</a> </div>
+                <div class="d.inline"><a href="delete/{{item.id}}" type="button" class="btn btn-danger">Delete</a> </div>
+            </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+<a href="/logout">logout</a>

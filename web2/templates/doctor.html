@@ -1,0 +1,34 @@
+
+<h1 class="text-center"> Register User's </h1>
+
+<br>
+<div class="container">
+    <!-- We will display our data in a normal HTML table using Django's
+    template for-loop to generate our table rows for us-->
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Field</th>
+            <th>Pan</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            {%for item in record%}
+            
+            <tr>
+              <td>{{item.id}}</td>
+              <td>{{item.name }}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.field}}</td>
+              <td><img src="/static/{{item.pan}}"></td>
+            </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+    </div>
